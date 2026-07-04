@@ -19,7 +19,7 @@ A generic sentence embedding treats both as plain text. StackMatch segments the 
 
 - [x] **Scraping** — built a ground-truth dataset from real GitHub duplicate labels
 - [X] **Segmentation** — separating prose from code within issues
-- [] **Dual embedding** — CodeBERT + sentence-transformer (Week 2)
+- [X] **Dual embedding** — CodeBERT + sentence-transformer (Week 2)
 - [ ] **Evaluation** — comparing single-embedding vs. dual-embedding approaches on Precision, Recall, MRR (Week 3)
 - [ ] **Deployment** — GitHub bot via webhook + FastAPI (Week 4)
 

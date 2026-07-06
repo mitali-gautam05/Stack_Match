@@ -15,14 +15,6 @@ Code:   NullPointerException at MainActivity.java:42
 
 A generic sentence embedding treats both as plain text. StackMatch segments the two, embeds them with models suited to each (a code-aware embedding model for stack traces, a sentence-transformer for prose), and fuses the two signals — testing whether this beats a single-embedding baseline on precision, recall, and MRR.
 
-## Status: Week 1 of 4
-
-- [x] **Scraping** — built a ground-truth dataset from real GitHub duplicate labels
-- [X] **Segmentation** — separating prose from code within issues
-- [X] **Dual embedding** — CodeBERT + sentence-transformer (Week 2)
-- [ ] **Evaluation** — comparing single-embedding vs. dual-embedding approaches on Precision, Recall, MRR (Week 3)
-- [ ] **Deployment** — GitHub bot via webhook + FastAPI (Week 4)
-
 ## How the ground-truth dataset was built
 
 Manually labeling duplicate issue pairs would take weeks. Instead, this project exploits something GitHub maintainers already do for free: when they close an issue as a duplicate, they link the original (`Duplicate of #1234`, `/duplicate <url>`, etc.). The scraper parses these existing labels rather than generating new ones.
